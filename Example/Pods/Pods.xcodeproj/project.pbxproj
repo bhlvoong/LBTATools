@@ -14,7 +14,6 @@
 		58A2D3C4810B853AB65A7CD43EEF0CE6 /* LBTATools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE0F0843CB652163CEF6775E82A466F3 /* LBTATools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7EEDF84966A2DBE3E815B9D3FA26708 /* Pods-LBTATools_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1027D915975CABCA54198E4BF7E886 /* Pods-LBTATools_Example-dummy.m */; };
 		C5C6DA5C8578B5C098EA406E03E6DC57 /* LBTATools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D54E2B554C65128895FFB034275DEA43 /* LBTATools-dummy.m */; };
-		C7516EF6227A2FB0004F5452 /* UIView+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516EF5227A2FB0004F5452 /* UIView+Stacking.swift */; };
 		D8135EF08B37BDB50358BFBD70FDF638 /* Pods-LBTATools_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 545DB73445919F35A4C5C8FFB2A4AB58 /* Pods-LBTATools_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA4FD1B786E2D41C8DB276269B7FBE04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +60,6 @@
 		BF5876F33DEE0B74E69612F71BC7D089 /* Pods_LBTATools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTATools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C199F1BC8712E5F7042F01AECC57D87D /* Pods-LBTATools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBTATools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C461D104C9675744C1C27BB4BFD65B11 /* LBTATools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LBTATools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7516EF5227A2FB0004F5452 /* UIView+Stacking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Stacking.swift"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D2BB945B3B63AECE46BC1F3243EAB181 /* Pods-LBTATools_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBTATools_Tests-Info.plist"; sourceTree = "<group>"; };
 		D54E2B554C65128895FFB034275DEA43 /* LBTATools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTATools-dummy.m"; sourceTree = "<group>"; };
@@ -152,7 +150,7 @@
 		88D506B13324248B5F7C5700EC1C4637 /* LBTATools */ = {
 			isa = PBXGroup;
 			children = (
-				C7516EF7227A3207004F5452 /* Classes */,
+				C7516EFB227A3428004F5452 /* Classes */,
 				320A0ADBB752DACA7B24101582FC73EC /* Pod */,
 				705CC00C7215399513AC5A0AB8DA982A /* Support Files */,
 			);
@@ -193,20 +191,11 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		C7516EF7227A3207004F5452 /* Classes */ = {
+		C7516EFB227A3428004F5452 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C7516EF8227A321D004F5452 /* Extensions */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		C7516EF8227A321D004F5452 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C7516EF5227A2FB0004F5452 /* UIView+Stacking.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -395,7 +384,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C6DA5C8578B5C098EA406E03E6DC57 /* LBTATools-dummy.m in Sources */,
-				C7516EF6227A2FB0004F5452 /* UIView+Stacking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
