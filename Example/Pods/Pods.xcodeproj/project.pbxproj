@@ -18,6 +18,7 @@
 		C7516F01227A3CD3004F5452 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516EFE227A3CD3004F5452 /* Extensions+UIView.swift */; };
 		C7516F02227A3CD3004F5452 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516EFF227A3CD3004F5452 /* UILabel.swift */; };
 		C7516F04227A4347004F5452 /* AnchoredConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F03227A4347004F5452 /* AnchoredConstraints.swift */; };
+		C7516F06227A452C004F5452 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F05227A452C004F5452 /* UIColor+Helpers.swift */; };
 		D8135EF08B37BDB50358BFBD70FDF638 /* Pods-LBTATools_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 545DB73445919F35A4C5C8FFB2A4AB58 /* Pods-LBTATools_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA4FD1B786E2D41C8DB276269B7FBE04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		C7516EFE227A3CD3004F5452 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		C7516EFF227A3CD3004F5452 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		C7516F03227A4347004F5452 /* AnchoredConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchoredConstraints.swift; sourceTree = "<group>"; };
+		C7516F05227A452C004F5452 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D2BB945B3B63AECE46BC1F3243EAB181 /* Pods-LBTATools_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBTATools_Tests-Info.plist"; sourceTree = "<group>"; };
 		D54E2B554C65128895FFB034275DEA43 /* LBTATools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTATools-dummy.m"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				C7516EFF227A3CD3004F5452 /* UILabel.swift */,
 				C7516EFD227A3CD3004F5452 /* UIView+Stacking.swift */,
 				C7516F03227A4347004F5452 /* AnchoredConstraints.swift */,
+				C7516F05227A452C004F5452 /* UIColor+Helpers.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7516F00227A3CD3004F5452 /* UIView+Stacking.swift in Sources */,
+				C7516F06227A452C004F5452 /* UIColor+Helpers.swift in Sources */,
 				C5C6DA5C8578B5C098EA406E03E6DC57 /* LBTATools-dummy.m in Sources */,
 				C7516F04227A4347004F5452 /* AnchoredConstraints.swift in Sources */,
 				C7516F02227A3CD3004F5452 /* UILabel.swift in Sources */,
