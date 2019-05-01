@@ -9,13 +9,9 @@
 import UIKit
 
 open class LBTAListCell<T>: UICollectionViewCell {
-    var item: T!
+    open var item: T!
     
-    let separatorView: UIView = {
-        let v = UIView()
-        v.backgroundColor = UIColor(white: 0.6, alpha: 0.5)
-        return v
-    }()
+    public let separatorView = UIView(backgroundColor: UIColor(white: 0.6, alpha: 0.5))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
