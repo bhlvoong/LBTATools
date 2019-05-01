@@ -9,7 +9,7 @@ import UIKit
 
 open class CircularImageView: UIImageView {
     
-    init(width: CGFloat) {
+    public init(width: CGFloat) {
         super.init(image: nil)
         contentMode = .scaleAspectFill
         widthAnchor.constraint(equalToConstant: width).isActive = true
