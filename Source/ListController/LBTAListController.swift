@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView>: UICollectionViewController {
+open class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView>: UICollectionViewController {
     
-    var items = [U]() {
+    open var items = [U]() {
         didSet {
             collectionView.reloadData()
         }
@@ -19,7 +19,7 @@ class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView>: UI
     fileprivate let cellId = "cellId"
     fileprivate let headerId = "headerId"
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         
@@ -27,22 +27,22 @@ class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView>: UI
         collectionView.register(H.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! T
         cell.item = items[indexPath.row]
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    override open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
         return header
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+    override open func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         view.layer.zPosition = -1
     }
     
@@ -52,7 +52,7 @@ class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView>: UI
         super.init(collectionViewLayout: layout)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError()
     }
     

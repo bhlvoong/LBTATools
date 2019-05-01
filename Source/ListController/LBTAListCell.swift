@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LBTAListCell<T>: UICollectionViewCell {
+open class LBTAListCell<T>: UICollectionViewCell {
     var item: T!
     
     let separatorView: UIView = {
@@ -23,18 +23,18 @@ class LBTAListCell<T>: UICollectionViewCell {
         setupViews()
     }
     
-    func setupViews() {}
+    open func setupViews() {}
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError()
     }
     
-    func addSeparatorView(leftPadding: CGFloat = 0) {
+    open func addSeparatorView(leftPadding: CGFloat = 0) {
         addSubview(separatorView)
         separatorView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: leftPadding, bottom: 0, right: 0), size: .init(width: 0, height: 0.5))
     }
     
-    func addSeparatorView(leadingAnchor: NSLayoutXAxisAnchor) {
+    open func addSeparatorView(leadingAnchor: NSLayoutXAxisAnchor) {
         addSubview(separatorView)
         separatorView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, size: .init(width: 0, height: 0.5))
     }
