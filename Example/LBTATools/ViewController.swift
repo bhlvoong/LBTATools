@@ -10,7 +10,9 @@ import UIKit
 import LBTATools
 
 class ViewController: UIViewController {
-
+    
+    let nameLabel = UILabel(text: "Name Label")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
