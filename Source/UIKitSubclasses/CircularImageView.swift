@@ -9,10 +9,12 @@ import UIKit
 
 open class CircularImageView: UIImageView {
     
-    public init(width: CGFloat) {
+    public init(width: CGFloat? = 0) {
         super.init(image: nil)
         contentMode = .scaleAspectFill
-        widthAnchor.constraint(equalToConstant: width).isActive = true
+        if let width = width {
+            widthAnchor.constraint(equalToConstant: width).isActive = true
+        }
         heightAnchor.constraint(equalTo: widthAnchor).isActive = true
         clipsToBounds = true
     }
