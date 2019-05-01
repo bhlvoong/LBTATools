@@ -60,13 +60,13 @@ extension UIView {
 }
 
 extension UIEdgeInsets {
-    static func allSides(side: CGFloat) -> UIEdgeInsets {
+    static public func allSides(side: CGFloat) -> UIEdgeInsets {
         return .init(top: side, left: side, bottom: side, right: side)
     }
 }
 
 extension UIImageView {
-    convenience init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
         self.init(image: image)
         self.contentMode = contentMode
         self.clipsToBounds = true

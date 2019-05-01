@@ -53,7 +53,7 @@ extension UIView {
     }
     
     @discardableResult
-    func fillSuperview(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
+    open func fillSuperview(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         let anchoredConstraints = AnchoredConstraints()
         guard let superviewTopAnchor = superview?.topAnchor,
@@ -66,7 +66,7 @@ extension UIView {
         return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
     }
     
-    func centerInSuperview(size: CGSize = .zero) {
+    open func centerInSuperview(size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterXAnchor = superview?.centerXAnchor {
             centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
@@ -85,7 +85,7 @@ extension UIView {
         }
     }
     
-    func centerXToSuperview() {
+    open func centerXToSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterXAnchor = superview?.centerXAnchor {
             centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
