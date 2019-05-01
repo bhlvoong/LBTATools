@@ -46,7 +46,7 @@ open class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView
         view.layer.zPosition = -1
     }
     
-    init(scrollDirection: UICollectionView.ScrollDirection = .vertical) {
+    public init(scrollDirection: UICollectionView.ScrollDirection = .vertical) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = scrollDirection
         super.init(collectionViewLayout: layout)
