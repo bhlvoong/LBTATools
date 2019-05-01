@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CircularImageView: UIImageView {
+open class CircularImageView: UIImageView {
     
     init(width: CGFloat) {
         super.init(image: nil)
@@ -17,12 +17,12 @@ class CircularImageView: UIImageView {
         clipsToBounds = true
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = frame.width / 2
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError()
     }
     
