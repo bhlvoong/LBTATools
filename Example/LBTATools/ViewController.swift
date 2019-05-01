@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import LBTATools
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.vstack()
     }
 
     override func didReceiveMemoryWarning() {

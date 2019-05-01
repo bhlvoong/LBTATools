@@ -1,0 +1,6 @@
+framework module LBTATools {
+  umbrella header "LBTATools-umbrella.h"
+
+  export *
+  module * { export * }
+}
