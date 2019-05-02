@@ -10,10 +10,11 @@ import UIKit
 
 extension UIView {
     
-    fileprivate func _stack(_ axis: NSLayoutConstraint.Axis = .vertical, views: [UIView], spacing: CGFloat = 0) -> UIStackView {
+    fileprivate func _stack(_ axis: NSLayoutConstraint.Axis = .vertical, views: [UIView], spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = axis
         stackView.spacing = spacing
+        stackView.alignment = alignment
         addSubview(stackView)
         stackView.fillSuperview()
         return stackView
