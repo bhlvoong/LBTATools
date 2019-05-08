@@ -86,6 +86,13 @@ extension UIView {
         }
     }
     
+    open func centerYToSuperview() {
+        translatesAutoresizingMaskIntoConstraints = false
+        if let superviewCenterYAnchor = superview?.centerYAnchor {
+            centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
+        }
+    }
+    
     open func constrainHeight(_ constant: CGFloat) -> AnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraints = AnchoredConstraints()
