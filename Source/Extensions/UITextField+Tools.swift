@@ -9,7 +9,7 @@ import UIKit
 
 extension UITextField {
 
-    convenience init(placeholder: String) {
+    public convenience init(placeholder: String) {
         self.init()
         self.placeholder = placeholder
     }
