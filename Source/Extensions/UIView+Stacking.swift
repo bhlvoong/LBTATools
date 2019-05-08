@@ -31,7 +31,7 @@ extension UIView {
     }
     
     @discardableResult
-    open func withSize<T: UIView>(size: CGSize) -> T {
+    open func withSize<T: UIView>(_ size: CGSize) -> T {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: size.width).isActive = true
         heightAnchor.constraint(equalToConstant: size.height).isActive = true
