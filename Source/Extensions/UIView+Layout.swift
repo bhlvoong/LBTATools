@@ -61,7 +61,7 @@ extension UIView {
     }
     
     @discardableResult
-    func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
+    open func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
         let anchoredConstraints = AnchoredConstraints()
         if #available(iOS 11.0, *) {
             guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
