@@ -26,6 +26,7 @@
 		C7516F13227A7032004F5452 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F12227A7032004F5452 /* UIStackView.swift */; };
 		C7516F5822828161004F5452 /* UITextField+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F5722828161004F5452 /* UITextField+Tools.swift */; };
 		C7516F5A228281E1004F5452 /* IndentedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F59228281E1004F5452 /* IndentedTextField.swift */; };
+		C7516F5C22828A9D004F5452 /* AspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516F5B22828A9D004F5452 /* AspectFitImageView.swift */; };
 		D8135EF08B37BDB50358BFBD70FDF638 /* Pods-LBTATools_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 545DB73445919F35A4C5C8FFB2A4AB58 /* Pods-LBTATools_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA4FD1B786E2D41C8DB276269B7FBE04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		C7516F12227A7032004F5452 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		C7516F5722828161004F5452 /* UITextField+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Tools.swift"; sourceTree = "<group>"; };
 		C7516F59228281E1004F5452 /* IndentedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentedTextField.swift; sourceTree = "<group>"; };
+		C7516F5B22828A9D004F5452 /* AspectFitImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectFitImageView.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D2BB945B3B63AECE46BC1F3243EAB181 /* Pods-LBTATools_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBTATools_Tests-Info.plist"; sourceTree = "<group>"; };
 		D54E2B554C65128895FFB034275DEA43 /* LBTATools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTATools-dummy.m"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				C7516F12227A7032004F5452 /* UIStackView.swift */,
 				C7516F5722828161004F5452 /* UITextField+Tools.swift */,
 				C7516F59228281E1004F5452 /* IndentedTextField.swift */,
+				C7516F5B22828A9D004F5452 /* AspectFitImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				C7516F0E227A55BC004F5452 /* CircularImageView.swift in Sources */,
 				C7516F5A228281E1004F5452 /* IndentedTextField.swift in Sources */,
 				C7516F0A227A54B0004F5452 /* LBTAListCell.swift in Sources */,
+				C7516F5C22828A9D004F5452 /* AspectFitImageView.swift in Sources */,
 				C7516F09227A54B0004F5452 /* LBTAListController.swift in Sources */,
 				C7516F06227A452C004F5452 /* UIColor+Helpers.swift in Sources */,
 				C7516F11227A6F1D004F5452 /* UIButton.swift in Sources */,
