@@ -51,9 +51,11 @@ stack(imageView,
 
 <br/>  
 ### 2. Fast and Easy ListController
-Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too. Using LBTAListController you can build out very common list patterns with just a few lines:
+Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too.  
 
 **Tinder Messages List Example**  
+
+Using LBTAListController you can build out very common list patterns with just a few lines:  
 
 ![Tinder Messages List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/2d0827c2-cf40-4faa-8300-1b3d37d390db)
 
