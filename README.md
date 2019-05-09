@@ -10,15 +10,16 @@ Do you suffer from ugly layout code and boring UICollectionViewController boiler
 
 Now, there is a solution to this problem: **LBTATools**.
 
-There are two main problems I want to tackle here:
+There are 3 main problems I want to tackle here:
 
 1. Use UIStackView to layout everything, but reduce overall code.
 2. Create quick vertical and horizontal lists, but skip the boring cell registration, numItemsForSection, cellForItemAt code.
+3. Generate a UILabel, UIButton, UIView, etc.. with one line of code.
 
 Below are solutions that I use for various client work.
 
-### Stack vertically and horizontally
-Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following are a few examples of how to use stack and hstack to get her done:
+### 1. Stack vertically and horizontally
+Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following examples illustrate usage of **stack** and **hstack**.
 
 ##### Example 1: Simple Vertical Layout
 ![Example Layout 1](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/3944b324-0a30-49d8-b5ef-f43b658ab826)
@@ -48,18 +49,77 @@ stack(imageView,
       	    exploreLabel, spacing: 16)).withMargins(.allSides(16)
 ```
 
+<br/>  
+### 2. Fast and Easy ListController
+Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too. Using LBTAListController you can build out very common list patterns with just a few lines:
 
-## Installation
+**Tinder Messages List Example**  
+![Tinder Messages List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/2d0827c2-cf40-4faa-8300-1b3d37d390db)
+
+<br>
+This view simplifies into one vertical list and a header that contains a horizontal list:
+![Simple Header List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
+
+Building this list is very easy now:  
+
+```swift
+class GreenCell: LBTAListCell<UIColor> {
+    override var item: UIColor! { didSet { backgroundColor = item }}
+}
+
+class SimpleListController: LBTAListController<GreenCell, UIColor, SimpleHeader> {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        items = [.green, .green, .green, .green]
+    }
+    // sizing methods
+}
+```
+The header also contains a ListController component:
+
+```swift
+class SimpleHeader: UICollectionReusableView {
+    
+    class BlueCell: LBTAListCell<UIColor> {
+        override var item: UIColor! { didSet { backgroundColor = item }}
+    }
+    class HeaderHorizontalController: LBTAListController<BlueCell,
+        UIColor, UICollectionReusableView> {
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            items = [.blue, .blue, .blue, .blue]
+        }
+    }
+    
+    let blueCellsHorizontalController = HeaderHorizontalController(scrollDirection: .horizontal)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        stack(blueCellsHorizontalController.view)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+}
+```
+
+Run the example project in this repository to see the code in its entirety.  LBTAListController uses the power of Generics to handle dynamics cell and header classes.
+
+## Installation - Cocoapods
 
 [CocoaPods](https://cocoapods.org) is an easy to use dependency manager . To install LBTATools simply add the following line to your Podfile:
 
 ```ruby
 pod 'LBTATools'
 ```
+No, I don't see myself writing this for SPM or any other package manager.
 
 ## Author
 
-Brian Voong, admin@letsbuildthatapp.com
+Brian Voong  
+Email: admin@letsbuildthatapp.com  
+[Twitter](https://twitter.com/buildthatapp) [YouTube](https://www.youtube.com/letsbuildthatapp)
 
 ## License
 

@@ -33,8 +33,11 @@ open class LBTAListController<T: LBTAListCell<U>, U, H: UICollectionReusableView
         return cell
     }
     
+    open func setupHeader(_ header: H) {}
+    
     override open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! H
+        setupHeader(header)
         return header
     }
     
