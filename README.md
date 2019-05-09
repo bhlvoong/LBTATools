@@ -43,9 +43,9 @@ hstack(imageView,
 ```swift
 stack(imageView,
       stack(titleLabel, 
-      descriptionLabel, 
-      UIView(), 
-      exploreLabel, spacing: 16)).withMargins(.allSides(16)
+      	  descriptionLabel, 
+      	  UIView(), 
+      	  exploreLabel, spacing: 16)).withMargins(.allSides(16)
 ```
 
 
