@@ -1,5 +1,5 @@
 <p align="center">
-  <img src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/99402c17-0b29-4a70-abcf-dbada851df25' />
+  <img src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/242ca77a-8ebc-4b06-ac96-52ca3f9546c8' />
 </p>
 
 <!---
@@ -74,7 +74,7 @@ Writing iOS apps will almost always involve lists, lots and lots of lists.  Most
 Using LBTAListController, you can build this common pattern with just a few lines. First, let's simplify the view into one vertical list and a header that contains a horizontal list:  
 <br/> 
 
-![Simplified List Header View](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
+![Simplified List Header View](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/29334d01-7880-4274-a45d-59d0d37ac472)
 
 Building this list is very easy now:  
 
@@ -156,6 +156,11 @@ Creating UIButtons also fall into this category of **code from hell**, so let's 
 let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFont(ofSize: 18), 
 	backgroundColor: .white, target: self, action: #selector(handleNext))
 ```
+
+## Video Tutorials
+Although this library is very easy to use, I recognize that a lot of you want some visual examples so below are some video tutorials:
+
+**o^ _ ^o COMING SOON  o^ _ ^o**
 
 ## Installation - Cocoapods
 

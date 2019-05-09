@@ -13,7 +13,7 @@ class SimpleCell: LBTAListCell<UIColor> {
     override var item: UIColor! { didSet { backgroundColor = item }}
 }
 
-class SimpleListController: LBTAListController<SimpleCell, UIColor, SimpleHeader>, UICollectionViewDelegateFlowLayout {
+class SimpleListController: LBTAListHeaderController<SimpleCell, UIColor, SimpleHeader>, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class SimpleHeader: UICollectionReusableView {
         override var item: UIColor! { didSet { backgroundColor = item }}
     }
     class HeaderHorizontalController: LBTAListController<HeaderCell,
-        UIColor, UICollectionReusableView>, UICollectionViewDelegateFlowLayout  {
+        UIColor>, UICollectionViewDelegateFlowLayout  {
         override func viewDidLoad() {
             super.viewDidLoad()
             items = [.blue, .blue, .blue, .blue]
