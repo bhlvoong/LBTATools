@@ -1,6 +1,10 @@
-# LBTATools
+<p align="center">
+  <img src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/99402c17-0b29-4a70-abcf-dbada851df25' />
+</p>
 
-[![CI Status](https://img.shields.io/travis/Brian Voong/LBTATools.svg?style=flat)](https://travis-ci.org/Brian Voong/LBTATools)
+<!---
+[![CI Status](https://img.shields.io/travis/Brian Voong/LBTATools.svg?style=flat)](https://travis-ci.org/Brian Voong/LBTATools) -->
+
 [![Version](https://img.shields.io/cocoapods/v/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
 [![License](https://img.shields.io/cocoapods/l/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
 [![Platform](https://img.shields.io/cocoapods/p/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
@@ -22,7 +26,8 @@ Below are solutions that I use for various client work.
 Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following examples illustrate usage of **stack** and **hstack**.
 
 ##### Example 1: Simple Vertical Layout
-![Example Layout 1](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/3944b324-0a30-49d8-b5ef-f43b658ab826)
+
+<img style="border: 1px solid" src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/bedf1b85-5b6b-4f12-9e25-66d254f6dede'>
 
 ```swift
 stack(imageView, nameLabel)
