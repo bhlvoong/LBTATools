@@ -21,18 +21,14 @@ Below are solutions that I use for various client work.
 Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following are a few examples of how to use stack and hstack to get her done:
 
 ##### Example 1: Simple Vertical Layout
-<kbd>
 ![Example Layout 1](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/9f7a415e-c521-422a-a9c4-15f4597e20ac)
-</kbd>
 
 ```swift
 stack(imageView, nameLabel)
 ```
 
 ##### Example 2: Horizontal then vertical with center alignment
-<kbd>
 ![Example Layout 2](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/7945ce8a-e627-4753-b574-1d266fa10589)
-</kbd>
 
 ```swift
 hstack(imageView,
@@ -42,9 +38,7 @@ hstack(imageView,
 
 
 ##### Example 3: Stack with layoutMargins
-<kbd>
 ![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/ff3ccd72-ac02-43af-9a2a-dd0516fd5cdd)
-</kbd>
 
 ```swift
 stack(imageView,
@@ -65,7 +59,7 @@ pod 'LBTATools'
 
 ## Author
 
-Brian Voong, bhlvoong@gmail.com
+Brian Voong, admin@letsbuildthatapp.com
 
 ## License
 
