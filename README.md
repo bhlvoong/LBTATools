@@ -10,7 +10,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
 
 ## The cure for boring UI code
-Do you suffer from ugly layout code and boring UICollectionViewController boilerplate code?  Yes, we've all been there. I'm not the only one that has written view setup functions that are so monstrous that it feels like a **beast from hell**.  
+Do you suffer from ugly layout code and boring UICollectionViewController boilerplate code?  Yes, we've all been there. I'm not the only one that has written monstrous view setup functions that look like **beasts from hell**.  
 
 Now, there is a solution to this problem: **LBTATools**.
 
@@ -27,7 +27,7 @@ Layouts can usually be broken down into some combination of horizontal and verti
 
 ##### Example 1: Simple Vertical Layout
 
-<img style="border: 1px solid" src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/bedf1b85-5b6b-4f12-9e25-66d254f6dede'>
+![Example Layout 1](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/3944b324-0a30-49d8-b5ef-f43b658ab826)
 
 ```swift
 stack(imageView, nameLabel)
@@ -74,7 +74,7 @@ Writing iOS apps will almost always involve lists, lots and lots of lists.  Most
 Using LBTAListController, you can build this common pattern with just a few lines. First, let's simplify the view into one vertical list and a header that contains a horizontal list:  
 <br/> 
 
-<img style='border: 1px solid' src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/8bcd90eb-4a8a-4c8f-9dc9-5ebd6727a787' >
+![Simplified List Header View](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
 
 Building this list is very easy now:  
 
@@ -159,18 +159,16 @@ let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFo
 
 ## Installation - Cocoapods
 
-[CocoaPods](https://cocoapods.org) is an easy to use dependency manager . To install LBTATools simply add the following line to your Podfile:
+[CocoaPods](https://cocoapods.org) is an easy to use dependency manager . To install LBTATools, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LBTATools'
 ```
-No, I don't see myself writing this for SPM or any other package manager.
+No, I don't see myself writing this for SPM or any other system.
 
 ## Author
 
-Brian Voong  
-Email: admin@letsbuildthatapp.com  
-[Twitter](https://twitter.com/buildthatapp) [YouTube](https://www.youtube.com/letsbuildthatapp)
+Brian Voong  [@buildthatapp](https://twitter.com/buildthatapp)  [YouTube](https://www.youtube.com/letsbuildthatapp)
 
 ## License
 
