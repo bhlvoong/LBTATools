@@ -9,7 +9,7 @@
 import UIKit
 import LBTATools
 
-class SimpleCell: LBTAListCell<UIColor> {
+class SimpleCell: LBTAListCell<UIColor> {    
     override var item: UIColor! { didSet { backgroundColor = item }}
 }
 

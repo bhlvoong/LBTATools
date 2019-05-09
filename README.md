@@ -9,21 +9,21 @@
 [![License](https://img.shields.io/cocoapods/l/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
 [![Platform](https://img.shields.io/cocoapods/p/LBTATools.svg?style=flat)](https://cocoapods.org/pods/LBTATools)
 
-## Description
+## The cure for boring UI code
 Do you suffer from ugly layout code and boring UICollectionViewController boilerplate code?  Yes, we've all been there. I'm not the only one that has written view setup functions that are so monstrous that it feels like a **beast from hell**.  
 
 Now, there is a solution to this problem: **LBTATools**.
 
 There are 3 main problems I want to tackle here:
 
-1. Use UIStackView to layout everything, but reduce overall code.
+1. Use UIStackView to layout everything in a single line.
 2. Create quick vertical and horizontal lists, but skip the boring cell registration, numItemsForSection, cellForItemAt code.
 3. Generate a UILabel, UIButton, UIView, etc.. with one line of code.
 
-Below are solutions that I use for various client work.
+This library contains extensions and classes that speed up development for my client work.  Hopefully, you can take advantage of some of these techniques.
 
 ### 1. Stack vertically and horizontally
-Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following examples illustrate usage of **stack** and **hstack**.
+Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following examples illustrate usage of **stack** and **hstack** for common layout patterns.
 
 ##### Example 1: Simple Vertical Layout
 
@@ -40,10 +40,11 @@ stack(imageView, nameLabel)
 hstack(imageView,
        stack(nameLabel, messageLabel, spacing: 4),
        spacing: 16, alignment: .center)
+// The key is to use stackView.alignment = .center   
 ```
 
 
-##### Example 3: Stack with layoutMargins.   
+##### Example 3: Embedded stacking with layoutMargins.   
 
 
 ![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/a4c78c29-13af-4cd7-8cfe-0f963b906a0e)
@@ -54,6 +55,7 @@ stack(imageView,
       	    descriptionLabel, 
       	    UIView(), 
       	    exploreLabel, spacing: 16)).withMargins(.allSides(16)
+// Using stackView.layoutMargins allows for easy padding manipulation
 ```
 
 <br/>  
@@ -64,15 +66,15 @@ Writing iOS apps will almost always involve lists, lots and lots of lists.  Most
 
 **Tinder Messages List Example**  
 
-Using LBTAListController you can build out very common list patterns with just a few lines:  
-
 ![Tinder Messages List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/2d0827c2-cf40-4faa-8300-1b3d37d390db)
 
 <br>
-This view simplifies into one vertical list and a header that contains a horizontal list:  
+
+
+Using LBTAListController, you can build this common pattern with just a few lines. First, let's simplify the view into one vertical list and a header that contains a horizontal list:  
 <br/> 
 
-![Simple Header List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
+<img style='border: 1px solid' src='https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/8bcd90eb-4a8a-4c8f-9dc9-5ebd6727a787' >
 
 Building this list is very easy now:  
 
@@ -119,6 +121,41 @@ class SimpleHeader: UICollectionReusableView {
 ```
 
 Run the example project in this repository to see the code in its entirety.  LBTAListController uses the power of Generics to handle dynamics cell and header classes.
+
+### 3. One line UI elements
+One major issue with creating UI elements is the amount of properties we have to set during the setup phase.  Here's a very common, and ugly, chunk of code that we want to avoid:
+
+```swift
+let nameLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Name"
+    label.textColor = .black
+    label.textAlignment = .center
+    label.font = .boldSystemFont(ofSize: 16)
+    label.numberOfLines = 2
+    return label
+}()
+```
+
+In total, this is 9 lines of code and gets out of control when creating multiple labels, buttons, etc.  So instead, let's make this simple and elegant with one line:
+
+```swift   
+let nameLabel = UILabel(text: "Name", font: .boldSystemFont(ofSize: 16), textColor: .black, 
+	textAlignment: .center, numberOfLines: 2)
+```
+
+All of the above parameters are optional, this means you can also use:
+
+```swift   
+let nameLabel = UILabel(text: "Name", numberOfLines: 2)
+```
+
+Creating UIButtons also fall into this category of **code from hell**, so let's make it easy with another one-liner:
+
+```swift   
+let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFont(ofSize: 18), 
+	backgroundColor: .white, target: self, action: #selector(handleNext))
+```
 
 ## Installation - Cocoapods
 
