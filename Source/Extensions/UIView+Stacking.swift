@@ -21,13 +21,13 @@ extension UIView {
     }
     
     @discardableResult
-    open func stack(_ views: UIView..., spacing: CGFloat = 0) -> UIStackView {
-        return _stack(.vertical, views: views, spacing: spacing)
+    open func stack(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill) -> UIStackView {
+        return _stack(.vertical, views: views, spacing: spacing, alignment: alignment)
     }
     
     @discardableResult
-    open func hstack(_ views: UIView..., spacing: CGFloat = 0) -> UIStackView {
-        return _stack(.horizontal, views: views, spacing: spacing)
+    open func hstack(_ views: UIView..., spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill) -> UIStackView {
+        return _stack(.horizontal, views: views, spacing: spacing, alignment: alignment)
     }
     
     @discardableResult
