@@ -54,10 +54,12 @@ stack(imageView,
 Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too. Using LBTAListController you can build out very common list patterns with just a few lines:
 
 **Tinder Messages List Example**  
+
 ![Tinder Messages List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/2d0827c2-cf40-4faa-8300-1b3d37d390db)
 
 <br>
-This view simplifies into one vertical list and a header that contains a horizontal list:
+This view simplifies into one vertical list and a header that contains a horizontal list:  
+
 ![Simple Header List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
 
 Building this list is very easy now:  
