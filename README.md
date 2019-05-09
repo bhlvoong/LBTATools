@@ -14,7 +14,7 @@ Do you suffer from ugly layout code and boring UICollectionViewController boiler
 
 Now, there is a solution to this problem: **LBTATools**.
 
-There are 3 main problems I want to tackle here:
+There are 3 main issues I want to tackle with this library:
 
 1. Use UIStackView to layout everything in a single line.
 2. Create quick vertical and horizontal lists, but skip the boring cell registration, numItemsForSection, cellForItemAt code.
@@ -62,7 +62,7 @@ stack(imageView,
 
 ### 2. Fast and Easy ListController  
 
-Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too.  
+Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too.  **Only works for single cell type lists**.
 
 **Tinder Messages List Example**  
 
