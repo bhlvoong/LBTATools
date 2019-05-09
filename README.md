@@ -38,7 +38,7 @@ hstack(imageView,
 ```
 
 
-##### Example 3: Stack with layoutMargins
+##### Example 3: Stack with layoutMargins.  
 ![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/a4c78c29-13af-4cd7-8cfe-0f963b906a0e)
 
 ```swift
@@ -50,7 +50,7 @@ stack(imageView,
 ```
 
 <br/>  
-### 2. Fast and Easy ListController
+### 2. Fast and Easy ListController  
 Writing iOS apps will almost always involve lists, lots and lots of lists.  Most of these will be vertical but horizontal ones are quite common too.  
 
 **Tinder Messages List Example**  
@@ -61,7 +61,7 @@ Using LBTAListController you can build out very common list patterns with just a
 
 <br>
 This view simplifies into one vertical list and a header that contains a horizontal list:  
-
+<br/>
 ![Simple Header List](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/f2fe6e0a-ce65-4e25-903b-78fd6c77a337)
 
 Building this list is very easy now:  
