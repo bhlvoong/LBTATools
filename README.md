@@ -15,12 +15,44 @@ There are two main problems I want to tackle here:
 1. Use UIStackView to layout everything, but reduce overall code.
 2. Create quick vertical and horizontal lists, but skip the boring cell registration, numItemsForSection, cellForItemAt code.
 
+Below are solutions that I use for various client work.
 
+### Stack vertically and horizontally
+Layouts can usually be broken down into some combination of horizontal and vertical **UIStackViews**. The following are a few examples of how to use stack and hstack to get her done:
+
+##### Example 1: Simple Vertical Layout
+<kbd>
+![Example Layout 1](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/9f7a415e-c521-422a-a9c4-15f4597e20ac)
+</kbd>
 
 ```swift
-
+stack(imageView, nameLabel)
 ```
 
+##### Example 2: Horizontal then vertical with center alignment
+<kbd>
+![Example Layout 2](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/7945ce8a-e627-4753-b574-1d266fa10589)
+</kbd>
+
+```swift
+hstack(imageView,
+       stack(nameLabel, messageLabel, spacing: 4),
+       spacing: 16, alignment: .center)
+```
+
+
+##### Example 3: Stack with layoutMargins
+<kbd>
+![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/ff3ccd72-ac02-43af-9a2a-dd0516fd5cdd)
+</kbd>
+
+```swift
+stack(imageView,
+      stack(titleLabel, 
+      		descriptionLabel, 
+      		UIView(), 
+      		exploreLabel, spacing: 16)).withMargins(.allSides(16)
+```
 
 
 ## Installation
