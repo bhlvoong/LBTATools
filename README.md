@@ -38,7 +38,7 @@ hstack(imageView,
 
 
 ##### Example 3: Stack with layoutMargins
-![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/06bbc541-0642-4351-a2e6-1706e311f472)
+![Example Layout 3](https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/a4c78c29-13af-4cd7-8cfe-0f963b906a0e)
 
 ```swift
 stack(imageView,
