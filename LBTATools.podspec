@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LBTATools'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'Set of tools to drastically improve development speed of UI in iOS applications'
 
 # This description is used to generate tags and improve search results.
