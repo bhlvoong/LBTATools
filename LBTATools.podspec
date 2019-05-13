@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LBTATools'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'Set of tools to drastically improve development speed of UI in iOS applications'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'A lot of the applications built for contract and consulting gigs require a ton of heavy lifting in terms of boiler plate code.  For the most part, I do a lot of prototyping and enjoy using a large set of tools that help me avoid a ton of boiler plate.  This library is aimed to reduce all the mundane code related to UI development.'
+  s.description      = 'A lot of the applications built for contract and consulting gigs require a ton of heavy lifting in terms of boilerplate code.  For the most part, I do a lot of prototyping and enjoy using a large set of tools that help me avoid a ton of repetitive syntax.  This library is aimed to reduce all the mundane code related to UI development.'
 
   s.homepage         = 'https://github.com/bhlvoong/LBTATools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

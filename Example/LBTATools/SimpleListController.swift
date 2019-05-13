@@ -9,16 +9,17 @@
 import UIKit
 import LBTATools
 
-class SimpleCell: LBTAListCell<UIColor> {    
+class SimpleListCell: LBTAListCell<UIColor> {    
     override var item: UIColor! { didSet { backgroundColor = item }}
 }
 
-class SimpleListController: LBTAListHeaderController<SimpleCell, UIColor, SimpleHeader>, UICollectionViewDelegateFlowLayout {
+class SimpleListController: LBTAListHeaderController<SimpleListCell, UIColor, SimpleHeader>, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Easy ListController"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
         items = [.green, .green, .green, .green, .green, .green, .green, .green, .green, .green, .green, .green]
     }
     

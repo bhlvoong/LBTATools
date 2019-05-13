@@ -8,5 +8,6 @@
 
 import UIKit
 
+/// Convenient list component where a Header class is not required.
 open class LBTAListController<T: LBTAListCell<U>, U>: LBTAListHeaderController<T, U, UICollectionReusableView> {
 }
