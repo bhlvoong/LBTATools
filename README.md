@@ -160,7 +160,9 @@ let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFo
 ## Video Tutorials
 Although this library is very easy to use, I recognize that a lot of you want some visual examples so below are some video tutorials:
 
-**o^ _ ^o COMING SOON  o^ _ ^o**
+[Using stack and hstack](https://youtu.be/cpZzWZEKTKE)
+
+
 
 ## Installation - Cocoapods
 

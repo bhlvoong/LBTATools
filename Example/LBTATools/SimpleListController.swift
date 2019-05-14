@@ -17,6 +17,7 @@ class SimpleListController: LBTAListHeaderController<SimpleListCell, UIColor, Si
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = "Easy ListController"
         navigationController?.navigationBar.prefersLargeTitles = true
         
