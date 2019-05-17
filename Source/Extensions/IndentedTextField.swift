@@ -11,12 +11,14 @@ open class IndentedTextField: UITextField {
     
     let padding: CGFloat
     
-    public init(placeholder: String? = nil, padding: CGFloat, cornerRadius: CGFloat, backgroundColor: UIColor = .clear) {
+    public init(placeholder: String? = nil, padding: CGFloat, cornerRadius: CGFloat, keyboardType: UIKeyboardType = .default, backgroundColor: UIColor = .clear, isSecureTextEntry: Bool = false) {
         self.padding = padding
         super.init(frame: .zero)
         self.placeholder = placeholder
         layer.cornerRadius = cornerRadius
         self.backgroundColor = backgroundColor
+        self.keyboardType = keyboardType
+        self.isSecureTextEntry = isSecureTextEntry
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {

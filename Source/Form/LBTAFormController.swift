@@ -20,7 +20,7 @@ open class LBTAFormController: UIViewController {
         return sv
     }()
     
-    public let stackView = UIStackView()
+    public let formContainerStackView = UIStackView()
     
     fileprivate let alignment: FormAlignment
     
@@ -38,22 +38,25 @@ open class LBTAFormController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.fillSuperview()
-        scrollView.addSubview(stackView)
+        scrollView.addSubview(formContainerStackView)
         
         if alignment == .top {
-            stackView.anchor(top: scrollView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+            formContainerStackView.anchor(top: scrollView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
         } else {
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-            stackView.centerInSuperview()
+            formContainerStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+            formContainerStackView.centerInSuperview()
         }
         
         setupKeyboardNotifications()
     }
     
-    open var extraBottomPadding: CGFloat = 16
-    
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if formContainerStackView.frame.height > view.frame.height {
+            scrollView.contentSize.height = formContainerStackView.frame.size.height
+        }
+        
         _ = distanceToBottom
     }
     
@@ -66,7 +69,7 @@ open class LBTAFormController: UIViewController {
             return distance
         }
         
-        return view.frame.height - stackView.frame.maxY
+        return view.frame.height - formContainerStackView.frame.maxY
     }
     
     fileprivate func setupKeyboardNotifications() {
@@ -78,7 +81,7 @@ open class LBTAFormController: UIViewController {
         guard let value = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardFrame = value.cgRectValue
         
-        scrollView.contentInset.bottom = keyboardFrame.height + extraBottomPadding
+        scrollView.contentInset.bottom = keyboardFrame.height
         
         // when stackView is center aligned, we need some extra bottom padding, not sure why yet...
         if alignment == .center {

@@ -138,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD71AFB9204008FA782 /* SimpleListController.swift */,
-				C78989A7228E3DF1002B4E20 /* LoginFormController.swift */,
 				C78989AC228E427D002B4E20 /* StackingExampleController.swift */,
+				C78989A7228E3DF1002B4E20 /* LoginFormController.swift */,
 				C78989AA228E3EDD002B4E20 /* ExamplesController.swift */,
 			);
 			name = Examples;

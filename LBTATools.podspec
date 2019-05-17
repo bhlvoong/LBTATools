@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LBTATools'
-  s.version          = '0.1.9'
+  s.version          = '1.0.0'
   s.summary          = 'Set of tools to drastically improve development speed of UI in iOS applications'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Brian Voong' => 'admin@letsbuildthatapp.com' }
   s.source           = { :git => 'https://github.com/bhlvoong/LBTATools.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/buildthatapp'
+  s.social_media_url = 'https://twitter.com/buildthatapp'
 
   s.ios.deployment_target = '9.0'
 
