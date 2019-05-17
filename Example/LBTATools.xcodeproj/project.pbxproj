@@ -15,6 +15,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		866C223CE9D52F38848E15C0 /* Pods_LBTATools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501B62BD265F3578A8462DA7 /* Pods_LBTATools_Tests.framework */; };
+		C78989A8228E3DF1002B4E20 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78989A7228E3DF1002B4E20 /* LoginFormController.swift */; };
+		C78989AB228E3EDD002B4E20 /* ExamplesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78989AA228E3EDD002B4E20 /* ExamplesController.swift */; };
+		C78989AD228E427D002B4E20 /* StackingExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78989AC228E427D002B4E20 /* StackingExampleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A9F8572E52189B8C991A2D07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BCE6590EEC869A7881A823E8 /* Pods-LBTATools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATools_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LBTATools_Tests/Pods-LBTATools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C78989A7228E3DF1002B4E20 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		C78989AA228E3EDD002B4E20 /* ExamplesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesController.swift; sourceTree = "<group>"; };
+		C78989AC228E427D002B4E20 /* StackingExampleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackingExampleController.swift; sourceTree = "<group>"; };
 		F532C98E53141EF67795A5E9 /* Pods-LBTATools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTATools_Example.release.xcconfig"; path = "Target Support Files/Pods-LBTATools_Example/Pods-LBTATools_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +110,8 @@
 		607FACD21AFB9204008FA782 /* Example for LBTATools */ = {
 			isa = PBXGroup;
 			children = (
+				C78989A9228E3E5F002B4E20 /* Examples */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* SimpleListController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -148,6 +154,17 @@
 				A9F8572E52189B8C991A2D07 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C78989A9228E3E5F002B4E20 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* SimpleListController.swift */,
+				C78989A7228E3DF1002B4E20 /* LoginFormController.swift */,
+				C78989AC228E427D002B4E20 /* StackingExampleController.swift */,
+				C78989AA228E3EDD002B4E20 /* ExamplesController.swift */,
+			);
+			name = Examples;
 			sourceTree = "<group>";
 		};
 		E20BF69925656F9646980457 /* Frameworks */ = {
@@ -334,7 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78989AD228E427D002B4E20 /* StackingExampleController.swift in Sources */,
+				C78989A8228E3DF1002B4E20 /* LoginFormController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* SimpleListController.swift in Sources */,
+				C78989AB228E3EDD002B4E20 /* ExamplesController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
