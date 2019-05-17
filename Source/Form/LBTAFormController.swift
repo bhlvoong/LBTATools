@@ -20,7 +20,11 @@ open class LBTAFormController: UIViewController {
         return sv
     }()
     
-    public let formContainerStackView = UIStackView()
+    public let formContainerStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.isLayoutMarginsRelativeArrangement = true
+        return sv
+    }()
     
     fileprivate let alignment: FormAlignment
     
