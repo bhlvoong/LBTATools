@@ -46,7 +46,7 @@ class ExamplesController: LBTAListController<ExampleCell, String>, UICollectionV
         case 1:
             navigationController?.pushViewController(StackingExampleController(), animated: true)
         default:
-            present(LoginFormController(), animated: true)
+            present(LoginFormController(alignment: .top), animated: true)
         }
     }
     

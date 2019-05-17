@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class FormViewController: UIViewController {
+open class LBTAFormController: UIViewController {
     
     var lowestElement: UIView!
     public lazy var scrollView: UIScrollView = {
@@ -22,23 +22,42 @@ open class FormViewController: UIViewController {
     
     public let stackView = UIStackView()
     
+    fileprivate let alignment: FormAlignment
+    
+    public init(alignment: FormAlignment = .top) {
+        self.alignment = alignment
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.fillSuperview()
+        scrollView.addSubview(stackView)
+        
+        if alignment == .top {
+            stackView.anchor(top: scrollView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        } else {
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+            stackView.centerInSuperview()
+        }
         
         setupKeyboardNotifications()
     }
     
-    var extraBottomPadding: CGFloat = 16
+    open var extraBottomPadding: CGFloat = 16
     
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         _ = distanceToBottom
     }
     
-    lazy var distanceToBottom = self.distanceFromLowestElementToBottom()
+    lazy fileprivate var distanceToBottom = self.distanceFromLowestElementToBottom()
     
     fileprivate func distanceFromLowestElementToBottom() -> CGFloat {
         if lowestElement != nil {
@@ -47,7 +66,7 @@ open class FormViewController: UIViewController {
             return distance
         }
         
-        return view.frame.height - stackView.bounds.height
+        return view.frame.height - stackView.frame.maxY
     }
     
     fileprivate func setupKeyboardNotifications() {
@@ -60,6 +79,12 @@ open class FormViewController: UIViewController {
         let keyboardFrame = value.cgRectValue
         
         scrollView.contentInset.bottom = keyboardFrame.height + extraBottomPadding
+        
+        // when stackView is center aligned, we need some extra bottom padding, not sure why yet...
+        if alignment == .center {
+            scrollView.contentInset.bottom += UIApplication.shared.statusBarFrame.height
+        }
+        
         if distanceToBottom > 0 {
             scrollView.contentInset.bottom -= distanceToBottom
         }
@@ -70,5 +95,9 @@ open class FormViewController: UIViewController {
     @objc fileprivate func handleKeyboardHide() {
         self.scrollView.contentInset.bottom = 0
         self.scrollView.scrollIndicatorInsets.bottom = 0
+    }
+    
+    public enum FormAlignment {
+        case top, center
     }
 }
