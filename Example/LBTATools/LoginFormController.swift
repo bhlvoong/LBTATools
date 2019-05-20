@@ -10,7 +10,7 @@ import LBTATools
 
 class LoginFormController: LBTAFormController {
     
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "tools"), contentMode: .scaleAspectFit)
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"), contentMode: .scaleAspectFit)
     let emailTextField = IndentedTextField(placeholder: "Email", padding: 12, cornerRadius: 5, keyboardType: .emailAddress, backgroundColor: .white)
     let usernameTextField = IndentedTextField(placeholder: "Username", padding: 12, cornerRadius: 5, backgroundColor: .white)
     let nameTextField = IndentedTextField(placeholder: "Full name", padding: 12, cornerRadius: 5, backgroundColor: .white)

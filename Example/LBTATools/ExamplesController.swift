@@ -33,7 +33,8 @@ class ExamplesController: LBTAListController<ExampleCell, String>, UICollectionV
         items = [
             "Sample ListHeaderController",
             "Stack and hstack",
-            "Login Form Keyboard Management"
+            "Login Form Keyboard Management",
+            "Login Form Centered"
         ]
         collectionView.alwaysBounceVertical = true
     }
@@ -45,8 +46,10 @@ class ExamplesController: LBTAListController<ExampleCell, String>, UICollectionV
             navigationController?.pushViewController(SimpleListController(), animated: true)
         case 1:
             navigationController?.pushViewController(StackingExampleController(), animated: true)
-        default:
+        case 2:
             present(LoginFormController(alignment: .top), animated: true)
+        default:
+            present(LoginFormController(alignment: .center), animated: true)
         }
     }
     
