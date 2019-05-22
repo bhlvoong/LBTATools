@@ -34,7 +34,7 @@ open class LBTAFormController: UIViewController {
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError()
+        fatalError("You most likely have a Storyboard controller that uses this class, please remove any instance of LBTAFormController or sublasses of this component from your Storyboard files.")
     }
     
     override open func viewDidLoad() {
