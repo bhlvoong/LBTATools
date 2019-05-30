@@ -80,7 +80,7 @@ open class LBTAListHeaderController<T: LBTAListCell<U>, U, H: UICollectionReusab
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError()
+        fatalError("You most likely have a Storyboard controller that uses this class, please remove any instance of LBTAListHeaderController or sublasses of this component from your Storyboard files.")
     }
     
 }
