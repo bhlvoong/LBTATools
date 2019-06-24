@@ -54,10 +54,10 @@ extension UIView {
     }
     
     @discardableResult
-    func withBorder(width: CGFloat, color: UIColor) -> UIView {
+    func withBorder<T: UIView>(width: CGFloat, color: UIColor) -> T {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
-        return self
+        return self as! T
     }
 }
 

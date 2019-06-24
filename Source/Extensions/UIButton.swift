@@ -21,7 +21,7 @@ extension UIButton {
         }
     }
     
-    convenience public init(image: UIImage, tintColor: UIColor? = nil) {
+    convenience public init(image: UIImage, tintColor: UIColor? = nil, target: Any? = nil, action: Selector? = nil) {
         self.init(type: .system)
         if tintColor == nil {
             setImage(image, for: .normal)
@@ -30,6 +30,9 @@ extension UIButton {
             self.tintColor = tintColor
         }
         
+        if let action = action {
+            addTarget(target, action: action, for: .touchUpInside)
+        }
     }
     
 }
