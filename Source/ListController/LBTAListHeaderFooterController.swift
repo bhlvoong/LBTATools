@@ -52,12 +52,16 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     /// Override this to manually set up your header with custom behavior.
     open func setupHeader(_ header: H) {}
     
+    open func setupFooter(_ footer: F) {}
+    
     override open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: supplementaryViewId, for: indexPath) as! H
-        if kind == UICollectionView.elementKindSectionHeader {
+        let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: supplementaryViewId, for: indexPath)
+        if let header = supplementaryView as? H {
             setupHeader(header)
+        } else if let footer = supplementaryView as? F {
+            setupFooter(footer)
         }
-        return header
+        return supplementaryView
     }
     
     override open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
