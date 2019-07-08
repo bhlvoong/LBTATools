@@ -96,18 +96,14 @@ extension UIView {
         }
     }
     
-    open func centerXTo(_ anchor: NSLayoutXAxisAnchor?) {
+    open func centerXTo(_ anchor: NSLayoutXAxisAnchor) {
         translatesAutoresizingMaskIntoConstraints = false
-        if let xAxisAnchor = anchor {
-            centerXAnchor.constraint(equalTo: xAxisAnchor).isActive = true
-        }
+        centerXAnchor.constraint(equalTo: anchor).isActive = true
     }
     
-    open func centerYTo(_ anchor: NSLayoutYAxisAnchor?) {
+    open func centerYTo(_ anchor: NSLayoutYAxisAnchor) {
         translatesAutoresizingMaskIntoConstraints = false
-        if let yAxisAnchor = anchor {
-            centerYAnchor.constraint(equalTo: yAxisAnchor).isActive = true
-        }
+        centerYAnchor.constraint(equalTo: anchor).isActive = true
     }
     
     open func centerXToSuperview() {
