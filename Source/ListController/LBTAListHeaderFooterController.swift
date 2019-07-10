@@ -33,14 +33,14 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     fileprivate let supplementaryViewId = "supplementaryViewId"
     
     /// Return an estimated height for proper indexPath using systemLayoutSizeFitting.
-    open func estimatedCellHeight(for indexPath: IndexPath) -> CGFloat {
+    open func estimatedCellHeight(for indexPath: IndexPath, cellWidth: CGFloat) -> CGFloat {
         let cell = T()
         let largeHeight: CGFloat = 1000
-        cell.frame = .init(x: 0, y: 0, width: view.frame.width, height: largeHeight)
+        cell.frame = .init(x: 0, y: 0, width: cellWidth, height: largeHeight)
         cell.item = items[indexPath.item]
         cell.layoutIfNeeded()
         
-        return cell.systemLayoutSizeFitting(.init(width: view.frame.width - 32, height: largeHeight)).height
+        return cell.systemLayoutSizeFitting(.init(width: cellWidth, height: largeHeight)).height
     }
     
     override open func viewDidLoad() {
