@@ -100,7 +100,7 @@ class SimpleHeader: UICollectionReusableView {
         override var item: UIColor! { didSet { backgroundColor = item }}
     }
     class HeaderHorizontalController: LBTAListController<BlueCell,
-        UIColor, UICollectionReusableView> {
+        UIColor> {
         override func viewDidLoad() {
             super.viewDidLoad()
             items = [.blue, .blue, .blue, .blue]
