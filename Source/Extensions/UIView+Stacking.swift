@@ -66,11 +66,3 @@ extension UIEdgeInsets {
         return .init(top: side, left: side, bottom: side, right: side)
     }
 }
-
-extension UIImageView {
-    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
-        self.init(image: image)
-        self.contentMode = contentMode
-        self.clipsToBounds = true
-    }
-}
