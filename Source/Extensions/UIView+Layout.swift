@@ -43,14 +43,14 @@ extension UIView {
                     anchoredConstraints.width = widthAnchor.constraint(equalToConstant: constant)
                 }
             }
-            [anchoredConstraints.top,
-             anchoredConstraints.leading,
-             anchoredConstraints.bottom,
-             anchoredConstraints.trailing,
-             anchoredConstraints.width,
-             anchoredConstraints.height].forEach {
-                $0?.isActive = true
-            }
+        }
+        [anchoredConstraints.top,
+         anchoredConstraints.leading,
+         anchoredConstraints.bottom,
+         anchoredConstraints.trailing,
+         anchoredConstraints.width,
+         anchoredConstraints.height].forEach {
+            $0?.isActive = true
         }
         return anchoredConstraints
     }
