@@ -36,7 +36,7 @@ extension UIView {
                 anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: anchor, constant: -constant)
             case .height(let constant):
                 if constant > 0 {
-                    anchoredConstraints.height = widthAnchor.constraint(equalToConstant: constant)
+                    anchoredConstraints.height = heightAnchor.constraint(equalToConstant: constant)
                 }
             case .width(let constant):
                 if constant > 0 {
