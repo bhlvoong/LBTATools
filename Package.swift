@@ -3,11 +3,14 @@ import PackageDescription
 
 let package = Package(
     name: "ZpecterLBTATools",
+    dependencies: [
+        
+    ],
     platforms: [
         .iOS(.v11)
     ],
     products: [
-        .library(name: "ZpecterLBTATools", targets: ["ZpecterLBTATools"]),
+        .library(name: "ZpecterLBTATools", targets: ["ZpecterLBTATools"], dependencies: []),
     ],
     targets: [
         .target(name: "ZpecterLBTATools",
