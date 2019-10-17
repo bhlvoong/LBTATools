@@ -9,6 +9,7 @@
 import UIKit
 
 // Reference Video: https://youtu.be/iqpAP7s3b-8
+@available(iOS 9.0, *)
 extension UIView {
     
     @discardableResult

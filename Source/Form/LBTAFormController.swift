@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 open class LBTAFormController: UIViewController {
     
     var lowestElement: UIView!

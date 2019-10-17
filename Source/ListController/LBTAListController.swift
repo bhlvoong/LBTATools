@@ -17,5 +17,6 @@ import UIKit
  U: the item type that each cell will visually represent.
  */
 
+@available(iOS 9.0, *)
 open class LBTAListController<T: LBTAListCell<U>, U>: LBTAListHeaderController<T, U, UICollectionReusableView> {
 }
