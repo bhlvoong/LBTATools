@@ -25,7 +25,9 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     /// An array of U objects this list will render. When using items.append, you still need to manually call reloadData.
     open var items = [U]() {
         didSet {
-            collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
