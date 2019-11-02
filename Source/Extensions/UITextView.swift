@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UITextView {
     convenience public init(text: String?, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left) {

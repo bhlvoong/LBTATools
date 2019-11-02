@@ -5,7 +5,7 @@
 //  Created by Brian Voong on 6/25/19.
 //
 
-import Foundation
+import UIKit
 
 /**
  ListHeaderFooterController helps register, dequeues, and sets up cells with their respective items to render in a standard single section list.
@@ -20,6 +20,7 @@ import Foundation
  F: the footer type below the section of cells
  
  */
+@available(iOS 9.0, *)
 open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollectionReusableView, F: UICollectionReusableView>: UICollectionViewController {
     
     /// An array of U objects this list will render. When using items.append, you still need to manually call reloadData.
