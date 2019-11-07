@@ -153,7 +153,7 @@ let nameLabel = UILabel(text: "Name", numberOfLines: 2)
 Creating UIButtons also fall into this category of **code from hell**, so let's make it easy with another one-liner:
 
 ```swift   
-let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFont(ofSize: 18), 
+let nextButton = UIButton(title: "Next", titleColor: .black, font: .boldSystemFont(ofSize: 18), 
 	backgroundColor: .white, target: self, action: #selector(handleNext))
 ```
 
@@ -171,7 +171,6 @@ Although this library is very easy to use, I recognize that a lot of you want so
 ```ruby
 pod 'LBTATools'
 ```
-No, I don't see myself writing this for SPM or any other system.
 
 ## Author
 
