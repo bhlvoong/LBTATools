@@ -19,7 +19,6 @@ extension UIView {
         stackView.distribution = distribution
         addSubview(stackView)
         stackView.fillSuperview()
-        stackView.isUserInteractionEnabled = false
         return stackView
     }
     
