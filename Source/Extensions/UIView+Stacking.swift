@@ -62,6 +62,12 @@ extension UIView {
     }
 }
 
+extension CGSize {
+    static public func equalEdge(_ size: CGFloat) -> CGSize {
+        return .init(width: size, height: size)
+    }
+}
+
 extension UIEdgeInsets {
     static public func allSides(_ side: CGFloat) -> UIEdgeInsets {
         return .init(top: side, left: side, bottom: side, right: side)
