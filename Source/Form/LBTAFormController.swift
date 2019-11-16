@@ -109,4 +109,10 @@ open class LBTAFormController: UIViewController {
     public enum FormAlignment {
         case top, center
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
 }
