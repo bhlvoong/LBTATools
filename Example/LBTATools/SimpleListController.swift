@@ -74,3 +74,23 @@ class SimpleHeader: UICollectionReusableView {
     }
 }
 
+import SwiftUI
+
+@available(iOS 13.0, *)
+struct ListControllerPreview: PreviewProvider {
+    
+    static var previews: some View {
+        Container()
+    }
+    
+    struct Container: UIViewControllerRepresentable {
+        func makeUIViewController(context: UIViewControllerRepresentableContext<ListControllerPreview.Container>) -> UIViewController {
+            SimpleListController()
+        }
+        
+        func updateUIViewController(_ uiViewController: ListControllerPreview.Container.UIViewControllerType, context: UIViewControllerRepresentableContext<ListControllerPreview.Container>) {
+            
+        }
+    }
+    
+}

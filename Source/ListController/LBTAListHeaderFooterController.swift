@@ -91,16 +91,16 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
      Initializes your ListHeaderController with a plain UICollectionViewFlowLayout.
      
      ## Parameters ##
+     layout: use the layout you desire such as UICollectionViewFlowLayout or UICollectionViewCompositionalLayout
+     
      scrollDirection: direction that your cells will be rendered
      
      */
-    public init(scrollDirection: UICollectionView.ScrollDirection = .vertical) {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = scrollDirection
-        super.init(collectionViewLayout: layout)
-    }
     
-    public init(layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()) {
+    public init(layout: UICollectionViewLayout = UICollectionViewFlowLayout(), scrollDirection: UICollectionView.ScrollDirection = .vertical) {
+        if let layout = layout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = scrollDirection
+        }
         super.init(collectionViewLayout: layout)
     }
     
