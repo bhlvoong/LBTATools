@@ -63,8 +63,8 @@ extension UIView {
 }
 
 extension CGSize {
-    static public func equalEdge(_ size: CGFloat) -> CGSize {
-        return .init(width: size, height: size)
+    static public func equalEdge(_ edge: CGFloat) -> CGSize {
+        return .init(width: edge, height: edge)
     }
 }
 
