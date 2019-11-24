@@ -20,7 +20,7 @@ import UIKit
  F: the footer type below the section of cells
  
  */
-@available(iOS 9.0, tvOS 9.0, *)
+@available(iOS 11.0, tvOS 11.0, *)
 open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollectionReusableView, F: UICollectionReusableView>: UICollectionViewController {
     
     /// An array of U objects this list will render. When using items.append, you still need to manually call reloadData.
