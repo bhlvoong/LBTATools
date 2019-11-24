@@ -7,7 +7,7 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
+@available(iOS 9.0, tvOS 9.0, *)
 extension UIStackView {
     
     @discardableResult
