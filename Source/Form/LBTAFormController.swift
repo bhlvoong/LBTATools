@@ -7,6 +7,7 @@
 
 import UIKit
 
+#if os(iOS)
 @available(iOS 11.0, *)
 open class LBTAFormController: UIViewController {
     
@@ -114,3 +115,4 @@ open class LBTAFormController: UIViewController {
     }
     
 }
+#endif
