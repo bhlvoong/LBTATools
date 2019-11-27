@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension UIButton {
     
     convenience public init(title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil) {
