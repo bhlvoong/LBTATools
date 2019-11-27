@@ -17,7 +17,7 @@ extension UIButton {
         
         self.backgroundColor = backgroundColor
         if let action = action {
-            addTarget(target, action: action, for: .touchUpInside)
+            addTarget(target, action: action, for: .primaryActionTriggered)
         }
     }
     
@@ -31,7 +31,7 @@ extension UIButton {
         }
         
         if let action = action {
-            addTarget(target, action: action, for: .touchUpInside)
+            addTarget(target, action: action, for: .primaryActionTriggered)
         }
     }
     
