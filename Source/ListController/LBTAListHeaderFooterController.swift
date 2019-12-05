@@ -48,7 +48,7 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 13.0, *) {
+        if #available(iOS 13.0, tvOS 13.0, *) {
             collectionView.backgroundColor = .systemBackground
         } else {
             collectionView.backgroundColor = .white
