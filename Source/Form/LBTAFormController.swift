@@ -7,15 +7,14 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
+#if os(iOS)
+@available(iOS 11.0, *)
 open class LBTAFormController: UIViewController {
     
     var lowestElement: UIView!
     public lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
-        if #available(iOS 11.0, *) {
-            sv.contentInsetAdjustmentBehavior = .never
-        }
+        sv.contentInsetAdjustmentBehavior = .never
         sv.contentSize = view.frame.size
         sv.keyboardDismissMode = .interactive
         return sv
@@ -116,3 +115,4 @@ open class LBTAFormController: UIViewController {
     }
     
 }
+#endif

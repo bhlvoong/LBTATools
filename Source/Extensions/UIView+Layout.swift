@@ -8,7 +8,7 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
+@available(iOS 11.0, tvOS 11.0, *)
 public enum Anchor {
     case top(_ top: NSLayoutYAxisAnchor, constant: CGFloat = 0)
     case leading(_ leading: NSLayoutXAxisAnchor, constant: CGFloat = 0)
@@ -19,7 +19,7 @@ public enum Anchor {
 }
 
 // Reference Video: https://youtu.be/iqpAP7s3b-8
-@available(iOS 9.0, *)
+@available(iOS 11.0, tvOS 11.0, *)
 extension UIView {
     
     @discardableResult
@@ -109,18 +109,13 @@ extension UIView {
     @discardableResult
     open func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
         let anchoredConstraints = AnchoredConstraints()
-        if #available(iOS 11.0, *) {
-            guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
-                let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
-                let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
-                let superviewTrailingAnchor = superview?.safeAreaLayoutGuide.trailingAnchor else {
-                    return anchoredConstraints
-            }
-            return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
-            
-        } else {
-            return anchoredConstraints
+        guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
+            let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
+            let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
+            let superviewTrailingAnchor = superview?.safeAreaLayoutGuide.trailingAnchor else {
+                return anchoredConstraints
         }
+        return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
     }
     
     open func centerInSuperview(size: CGSize = .zero) {
