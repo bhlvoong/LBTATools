@@ -104,7 +104,7 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
      
      */
     
-    public init(layout: UICollectionViewLayout = UICollectionViewFlowLayout(), scrollDirection: UICollectionView.ScrollDirection = .vertical, rowSpace: CGFloat?, columnSpace: CGFloat?) {
+    public init(layout: UICollectionViewLayout = UICollectionViewFlowLayout(), scrollDirection: UICollectionView.ScrollDirection = .vertical, rowSpace: CGFloat? = nil, columnSpace: CGFloat? = nil) {
         if let layout = layout as? UICollectionViewFlowLayout {
             layout.scrollDirection = scrollDirection
             if let space = rowSpace {
