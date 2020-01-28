@@ -2,9 +2,6 @@
 //  UITextField.swift
 //  LBTATools
 //
-//  Created by Shawn Gee on 1/28/20.
-//  Copyright © 2020 Swift Student. All rights reserved.
-//
 
 import UIKit
 
