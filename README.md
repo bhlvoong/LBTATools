@@ -164,13 +164,18 @@ Although this library is very easy to use, I recognize that a lot of you want so
 
 
 
-## Installation - Cocoapods
+## Installation
+
+### Cocoapods
 
 [CocoaPods](https://cocoapods.org) is an easy to use dependency manager . To install LBTATools, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LBTATools'
 ```
+
+### Swift Package Manager with Xcode 11
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
 
 ## Author
 
