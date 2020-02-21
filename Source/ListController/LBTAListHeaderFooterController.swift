@@ -65,8 +65,8 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     /// ListHeaderController automatically dequeues your T cell and sets the correct item object on it.
     override open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! T
-        cell.item = items[indexPath.row]
         cell.parentController = self
+        cell.item = items[indexPath.row]
         return cell
     }
     
