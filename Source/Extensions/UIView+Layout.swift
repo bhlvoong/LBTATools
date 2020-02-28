@@ -161,6 +161,16 @@ extension UIView {
         }
     }
     
+    open func addCenterInSuperview(superview: UIView, size: CGSize = .zero) {
+        superview.addSubview(self)
+        self.centerInSuperview(size: size)
+    }
+    
+    open func addFillSuperview(superview: UIView,padding: UIEdgeInsets = .zero) {
+        superview.addSubview(self)
+        self.fillSuperview(padding: padding)
+    }
+    
     @discardableResult
     open func constrainHeight(_ constant: CGFloat) -> AnchoredConstraints {
         translatesAutoresizingMaskIntoConstraints = false

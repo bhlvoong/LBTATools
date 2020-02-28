@@ -72,6 +72,10 @@ extension UIEdgeInsets {
     static public func allSides(_ side: CGFloat) -> UIEdgeInsets {
         return .init(top: side, left: side, bottom: side, right: side)
     }
+    
+    static public func linearSides(v vertical: CGFloat, h horizontal: CGFloat) -> UIEdgeInsets {
+        return .init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
+    }
 }
 
 extension UIImageView {
