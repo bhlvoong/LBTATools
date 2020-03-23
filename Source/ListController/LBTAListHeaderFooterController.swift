@@ -5,7 +5,7 @@
 //  Created by Brian Voong on 6/25/19.
 //
 
-import Foundation
+import UIKit
 
 /**
  ListHeaderFooterController helps register, dequeues, and sets up cells with their respective items to render in a standard single section list.
@@ -20,12 +20,15 @@ import Foundation
  F: the footer type below the section of cells
  
  */
+@available(iOS 11.0, tvOS 11.0, *)
 open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollectionReusableView, F: UICollectionReusableView>: UICollectionViewController {
     
     /// An array of U objects this list will render. When using items.append, you still need to manually call reloadData.
     open var items = [U]() {
         didSet {
-            collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -45,7 +48,14 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .white
+        
+        #if os(iOS)
+        if #available(iOS 13.0, *) {
+            collectionView.backgroundColor = .systemBackground
+        } else {
+            collectionView.backgroundColor = .white
+        }
+        #endif
         
         collectionView.register(T.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(H.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: supplementaryViewId)
@@ -88,12 +98,16 @@ open class LBTAListHeaderFooterController<T: LBTAListCell<U>, U, H: UICollection
      Initializes your ListHeaderController with a plain UICollectionViewFlowLayout.
      
      ## Parameters ##
+     layout: use the layout you desire such as UICollectionViewFlowLayout or UICollectionViewCompositionalLayout
+     
      scrollDirection: direction that your cells will be rendered
      
      */
-    public init(scrollDirection: UICollectionView.ScrollDirection = .vertical) {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = scrollDirection
+    
+    public init(layout: UICollectionViewLayout = UICollectionViewFlowLayout(), scrollDirection: UICollectionView.ScrollDirection = .vertical) {
+        if let layout = layout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = scrollDirection
+        }
         super.init(collectionViewLayout: layout)
     }
     

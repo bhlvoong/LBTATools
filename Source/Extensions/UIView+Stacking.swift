@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 extension UIView {
     
     fileprivate func _stack(_ axis: NSLayoutConstraint.Axis = .vertical, views: [UIView], spacing: CGFloat = 0, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill) -> UIStackView {
@@ -58,6 +59,12 @@ extension UIView {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
         return self as! T
+    }
+}
+
+extension CGSize {
+    static public func equalEdge(_ edge: CGFloat) -> CGSize {
+        return .init(width: edge, height: edge)
     }
 }
 

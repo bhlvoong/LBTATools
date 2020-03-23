@@ -153,7 +153,7 @@ let nameLabel = UILabel(text: "Name", numberOfLines: 2)
 Creating UIButtons also fall into this category of **code from hell**, so let's make it easy with another one-liner:
 
 ```swift   
-let nextButton = UIButton(title: "Next", titleColor: .white, font: .boldSystemFont(ofSize: 18), 
+let nextButton = UIButton(title: "Next", titleColor: .black, font: .boldSystemFont(ofSize: 18), 
 	backgroundColor: .white, target: self, action: #selector(handleNext))
 ```
 
@@ -164,14 +164,18 @@ Although this library is very easy to use, I recognize that a lot of you want so
 
 
 
-## Installation - Cocoapods
+## Installation
+
+### Cocoapods
 
 [CocoaPods](https://cocoapods.org) is an easy to use dependency manager . To install LBTATools, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LBTATools'
 ```
-No, I don't see myself writing this for SPM or any other system.
+
+### Swift Package Manager with Xcode 11
+Follow [this doc](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
 
 ## Author
 

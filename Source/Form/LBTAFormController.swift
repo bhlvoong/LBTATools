@@ -7,14 +7,14 @@
 
 import UIKit
 
+#if os(iOS)
+@available(iOS 11.0, *)
 open class LBTAFormController: UIViewController {
     
     var lowestElement: UIView!
     public lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
-        if #available(iOS 11.0, *) {
-            sv.contentInsetAdjustmentBehavior = .never
-        }
+        sv.contentInsetAdjustmentBehavior = .never
         sv.contentSize = view.frame.size
         sv.keyboardDismissMode = .interactive
         return sv
@@ -108,4 +108,11 @@ open class LBTAFormController: UIViewController {
     public enum FormAlignment {
         case top, center
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
 }
+#endif

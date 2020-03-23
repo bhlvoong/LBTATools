@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 open class CircularImageView: UIImageView {
     
     public init(width: CGFloat, image: UIImage? = nil) {

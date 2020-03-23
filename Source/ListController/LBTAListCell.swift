@@ -9,6 +9,7 @@
 import UIKit
 
 /// ListCell represents a cell that ListHeaderController registers and dequeues for list rendering. T represents the Class Type, usually a model or view model object, this cell should render visually.
+@available(iOS 11.0, tvOS 11.0, *)
 open class LBTAListCell<T>: UICollectionViewCell {
     
     /// item is fed in automatically from ListHeaderController
@@ -33,7 +34,6 @@ open class LBTAListCell<T>: UICollectionViewCell {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
         setupViews()
     }
     

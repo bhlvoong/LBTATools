@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LBTATools'
-  s.version          = '1.0.8'
+  s.version          = '1.0.12'
   s.summary          = 'Set of tools to drastically improve development speed of UI in iOS applications'
 
   s.description      = 'A lot of the applications built for contract and consulting gigs require a ton of heavy lifting in terms of boilerplate code.  For the most part, I do a lot of prototyping and enjoy using a large set of tools that help me avoid a ton of repetitive syntax.  This library is aimed to reduce all the mundane code related to UI development.'
