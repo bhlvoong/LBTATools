@@ -113,32 +113,6 @@ extension UIView {
         }
         return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
     }
-
-    @discardableResult
-    open func constrainHeight(_ constant: CGFloat) -> AnchoredConstraints {
-        translatesAutoresizingMaskIntoConstraints = false
-        var anchoredConstraints = AnchoredConstraints()
-        anchoredConstraints.height = heightAnchor.constraint(equalToConstant: constant)
-        anchoredConstraints.height?.isActive = true
-        return anchoredConstraints
-    }
-    
-    @discardableResult
-    open func constrainWidth(_ constant: CGFloat) -> AnchoredConstraints {
-        translatesAutoresizingMaskIntoConstraints = false
-        var anchoredConstraints = AnchoredConstraints()
-        anchoredConstraints.width = widthAnchor.constraint(equalToConstant: constant)
-        anchoredConstraints.width?.isActive = true
-        return anchoredConstraints
-    }
-    
-    @discardableResult
-    open func constrainSize(_ size: CGSize) -> AnchoredConstraints {
-        var anchoredConstraints = AnchoredConstraints()
-        anchoredConstraints.width = constrainWidth(size.width).width
-        anchoredConstraints.height = constrainHeight(size.height).height
-        return anchoredConstraints
-    }
     
     open func centerInSuperview(size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -185,8 +159,9 @@ extension UIView {
     
     @discardableResult
     open func constrainHeight(_ constant: CGFloat) -> AnchoredConstraints {
-        translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraints = AnchoredConstraints()
+        guard constant > 0 else { return anchoredConstraints }
+        translatesAutoresizingMaskIntoConstraints = false
         anchoredConstraints.height = heightAnchor.constraint(equalToConstant: constant)
         anchoredConstraints.height?.isActive = true
         return anchoredConstraints
@@ -194,10 +169,19 @@ extension UIView {
     
     @discardableResult
     open func constrainWidth(_ constant: CGFloat) -> AnchoredConstraints {
-        translatesAutoresizingMaskIntoConstraints = false
         var anchoredConstraints = AnchoredConstraints()
+        guard constant > 0 else { return anchoredConstraints }
+        translatesAutoresizingMaskIntoConstraints = false
         anchoredConstraints.width = widthAnchor.constraint(equalToConstant: constant)
         anchoredConstraints.width?.isActive = true
+        return anchoredConstraints
+    }
+    
+    @discardableResult
+    open func constrainSize(_ size: CGSize) -> AnchoredConstraints {
+        var anchoredConstraints = AnchoredConstraints()
+        anchoredConstraints.width = constrainWidth(size.width).width
+        anchoredConstraints.height = constrainHeight(size.height).height
         return anchoredConstraints
     }
     
