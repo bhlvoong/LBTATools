@@ -3,7 +3,7 @@
 //  LBTATools
 //
 //  Created by Brian Voong on 4/28/19.
-//  Copyright © 2019 Tieda Wei. All rights reserved.
+//  Copyright © 2019 Brian Voong. All rights reserved.
 //
 
 import UIKit
