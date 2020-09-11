@@ -13,5 +13,13 @@ extension UITextField {
         self.init()
         self.placeholder = placeholder
     }
+    
+    public convenience init(placeholder: String, textColor: UIColor = .label, secureEntry: Bool = false, tams: Bool = true) {
+    self.init()
+    self.placeholder = placeholder
+    self.textColor = textColor
+    self.isSecureTextEntry = secureEntry
+    self.translatesAutoresizingMaskIntoConstraints = tams
+  }
 
 }
