@@ -42,7 +42,7 @@ open class LBTAFormController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(scrollView)
-        scrollView.fillSuperview()
+        scrollView.fillSuperviewSafeAreaLayoutGuide()
         scrollView.addSubview(formContainerStackView)
         
         if alignment == .top {
